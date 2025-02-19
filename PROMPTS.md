@@ -7,3 +7,7 @@
 - Run gradle command to get and install all dependencies
 - Convert my Main class into SpringBoot Application
 - commit and push all changes to my repository
+
+## Testing
+- Act as a senior java developer. Write unit tests for the previous class files. Use spring-boot-test as test framework.
+- Add tests for this class
