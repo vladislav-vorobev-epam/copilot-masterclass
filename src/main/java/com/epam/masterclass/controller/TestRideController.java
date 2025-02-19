@@ -23,5 +23,20 @@ public class TestRideController {
         return service.save(testRide);
     }
 
+    @PostMapping("/book")
+    public TestRide bookRide(@RequestBody TestRide testRide) {
+        return service.bookRide(testRide);
+    }
+
+    @DeleteMapping("/cancel/{id}")
+    public void cancelBooking(@PathVariable Long id) {
+        service.cancelBooking(id);
+    }
+
+    @GetMapping("/customer/{customerId}")
+    public List<TestRide> listRidesForCustomer(@PathVariable Long customerId) {
+        return service.listRidesForCustomer(customerId);
+    }
+
     // Other endpoints
 }

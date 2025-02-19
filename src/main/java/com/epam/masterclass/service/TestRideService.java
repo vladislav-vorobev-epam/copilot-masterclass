@@ -20,5 +20,20 @@ public class TestRideService {
         return repository.save(testRide);
     }
 
+    public TestRide bookRide(TestRide testRide) {
+        // Business logic for booking a ride
+        return repository.save(testRide);
+    }
+
+    public void cancelBooking(Long id) {
+        // Business logic for canceling a booking
+        repository.deleteById(id);
+    }
+
+    public List<TestRide> listRidesForCustomer(Long customerId) {
+        // Business logic for listing rides for a specific customer
+        return repository.findByCustomerId(customerId);
+    }
+
     // Other business logic methods
 }
